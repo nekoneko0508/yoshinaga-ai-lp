@@ -1,4 +1,4 @@
-const contactUrl = "#contact";
+const contactUrl = "https://calendar.app.google/upnhBkh2tjp5CE5c8";
 
 document.querySelectorAll("[data-contact-link]").forEach((link) => {
   link.setAttribute("href", contactUrl);
