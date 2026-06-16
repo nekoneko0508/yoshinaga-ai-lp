@@ -31,7 +31,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--bg);
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Meiryo", sans-serif;
+  font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -1105,5 +1105,105 @@ h3 {
   .site-footer {
     display: grid;
     gap: 10px;
+  }
+}
+
+/* AI担当者育成LP additions */
+h1 span,
+h2 span {
+  white-space: normal;
+}
+
+.monitor {
+  background: #fff;
+}
+
+.monitor-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(280px, 0.8fr);
+  gap: 24px;
+}
+
+.monitor-grid article,
+.faq-list details {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 16px 42px rgba(18, 43, 64, 0.06);
+}
+
+.monitor-grid article {
+  padding: 34px;
+}
+
+.monitor-grid h3 {
+  margin-bottom: 18px;
+}
+
+.monitor-grid ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--muted);
+}
+
+.goal-card {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  background: linear-gradient(135deg, #fff 0%, #f2f7fa 100%) !important;
+}
+
+.goal-card p {
+  color: var(--muted);
+}
+
+.goal-card .button {
+  align-self: end;
+  margin-top: 8px;
+}
+
+.faq {
+  background: var(--soft);
+}
+
+.faq-list {
+  display: grid;
+  gap: 16px;
+}
+
+.faq-list summary {
+  min-height: 64px;
+  padding: 20px 24px;
+  cursor: pointer;
+  color: var(--navy);
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.faq-list p {
+  padding: 0 24px 22px;
+  color: var(--muted);
+}
+
+.nav-contact {
+  max-width: 23em;
+  text-align: center;
+}
+
+@media (max-width: 1180px) {
+  .monitor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .monitor-grid article {
+    padding: 24px;
+  }
+
+  .nav-contact {
+    max-width: none;
   }
 }
