@@ -1150,14 +1150,14 @@ h2 span {
 
 .monitor-facts {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 .monitor-facts div {
-  min-height: 108px;
-  padding: 22px;
+  min-height: 104px;
+  padding: 20px;
   border: 1px solid var(--line);
   border-radius: 12px;
   background: #fff;
@@ -1181,6 +1181,111 @@ h2 span {
   color: var(--navy);
   font-size: 1.08rem;
   line-height: 1.45;
+}
+
+.monitor-note {
+  margin-bottom: 22px;
+  color: var(--gold);
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.monitor-message {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 24px 28px;
+  border: 1px solid rgba(184, 121, 31, 0.2);
+  border-radius: 12px;
+  background: #fffaf1;
+}
+
+.monitor-message p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.monitor-message strong {
+  color: var(--navy);
+  font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+  line-height: 1.6;
+}
+
+.monitor-company {
+  grid-template-columns: 1.2fr 1fr 1fr;
+}
+
+.monitor-steps {
+  margin-top: 26px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--soft);
+}
+
+.monitor-steps h3 {
+  margin-bottom: 18px;
+}
+
+.monitor-steps ol {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.monitor-steps li {
+  position: relative;
+  min-height: 178px;
+  padding: 22px 18px;
+  border: 1px solid rgba(18, 43, 64, 0.09);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.monitor-steps li span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.monitor-steps li strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--navy);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.monitor-steps li p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.monitor-cta {
+  display: grid;
+  justify-items: center;
+  margin-top: 28px;
+  padding: 28px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #102033 0%, #1d3f58 100%);
+  text-align: center;
+}
+
+.monitor-cta .button-primary {
+  background: var(--gold);
+}
+
+.monitor-cta .button-note {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .button-note {
@@ -1308,6 +1413,7 @@ h2 span {
 @media (max-width: 1180px) {
   .monitor-grid,
   .monitor-facts,
+  .monitor-steps ol,
   .proof-grid,
   .metrics-grid {
     grid-template-columns: 1fr;
@@ -1328,8 +1434,15 @@ h2 span {
   }
 
   .monitor-facts div,
+  .monitor-message,
+  .monitor-steps,
+  .monitor-cta,
   .proof-grid article {
     min-height: auto;
     padding: 20px;
+  }
+
+  .monitor-steps li {
+    min-height: auto;
   }
 }
