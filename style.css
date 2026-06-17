@@ -1958,14 +1958,18 @@ h2 span {
 ========================================================================== */
 
 .hero {
-  padding: 0 !important;
+  display: block !important;
+  align-items: initial !important;
+  padding: 80px 0 !important;
   background: #f8f9fa !important;
 }
 
 .hero-main {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr) !important;
   align-items: center !important;
-  gap: clamp(40px, 5vw, 76px) !important;
-  padding: clamp(72px, 7vw, 104px) clamp(28px, 5vw, 86px) 42px !important;
+  gap: 48px !important;
+  padding: 0 clamp(28px, 5vw, 86px) 42px !important;
 }
 
 .hero-copy {
@@ -2101,10 +2105,25 @@ h2 span {
   }
 }
 
+@media (max-width: 768px) {
+  .hero {
+    padding: 56px 0 !important;
+  }
+
+  .hero-main {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+
 @media (max-width: 680px) {
+  .hero {
+    padding: 42px 0 !important;
+  }
+
   .hero-main {
     gap: 28px !important;
-    padding: 46px 20px 24px !important;
+    padding: 0 20px 24px !important;
   }
 
   #hero-title {
