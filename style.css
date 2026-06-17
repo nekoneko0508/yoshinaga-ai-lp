@@ -2545,6 +2545,398 @@ h2 span {
 }
 
 /* ==========================================================================
+スマホ最終上書き FINAL：実在セレクタだけで既存CSSに勝たせる
+========================================================================== */
+
+@media (max-width: 900px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  main,
+  section,
+  .site-header,
+  .hero,
+  .issue-band,
+  .section,
+  #monitor,
+  #solutions,
+  #proof,
+  #results,
+  #services,
+  #consult-flow,
+  .profile,
+  .contact,
+  .faq,
+  .site-footer {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  #monitor .outcome-grid,
+  #monitor .monitor-facts,
+  #monitor .monitor-grid,
+  #monitor .monitor-steps ol,
+  #solutions .solution-grid,
+  #proof .proof-grid,
+  #results .metrics-grid,
+  #services .service-grid,
+  #consult-flow .consult-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  #monitor .reassurance-card,
+  #monitor .monitor-summary-card,
+  #monitor .monitor-message,
+  #monitor .monitor-cta,
+  #monitor .monitor-steps,
+  #monitor .outcome-grid article,
+  #monitor .monitor-facts div,
+  #monitor .monitor-grid article,
+  #monitor .monitor-steps li,
+  #solutions .solution-card,
+  #proof .proof-grid article,
+  #results .metrics-grid article,
+  #services .service-grid article,
+  #consult-flow .consult-grid article {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  #consult-flow .consult-grid article {
+    display: block !important;
+    padding: 24px 20px !important;
+  }
+
+  #monitor .reassurance-card,
+  #monitor .monitor-summary-card,
+  #monitor .monitor-message,
+  #monitor .monitor-cta,
+  #solutions .solution-card,
+  #proof .proof-grid article,
+  #services .service-grid article,
+  #consult-flow .consult-grid article {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+
+  #solutions .section-heading,
+  #proof .section-heading,
+  #results .section-heading,
+  #services .section-heading,
+  #consult-flow .section-heading,
+  #monitor .section-heading {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  #solutions-title,
+  #proof-title,
+  #results-title,
+  #services-title,
+  #consult-flow-title,
+  #monitor-title {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(1.48rem, 5.7vw, 2rem) !important;
+    line-height: 1.38 !important;
+    letter-spacing: normal !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  #solutions-title span,
+  #proof-title span,
+  #results-title span,
+  #services-title span,
+  #monitor-title span,
+  .contact h2 span {
+    display: inline !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  #monitor .reassurance-card h3,
+  #monitor .reassurance-card p,
+  #monitor .monitor-grid h3,
+  #monitor .monitor-grid li,
+  #monitor .monitor-steps h3,
+  #monitor .monitor-steps strong,
+  #monitor .monitor-steps p,
+  #monitor .monitor-outcomes h3,
+  #monitor .monitor-outcomes strong,
+  #monitor .monitor-outcomes p,
+  #monitor .monitor-facts strong,
+  #monitor .monitor-message strong,
+  #solutions .solution-card h3,
+  #solutions .solution-card p,
+  #solutions .mini-cta,
+  #proof .proof-grid strong,
+  #proof .proof-grid p,
+  #results .result-number,
+  #results .result-label,
+  #services .service-grid h3,
+  #services .service-grid p,
+  #consult-flow .consult-grid strong {
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    line-break: strict !important;
+  }
+
+  #monitor .reassurance-card h3,
+  #monitor .monitor-grid h3,
+  #monitor .monitor-steps h3,
+  #monitor .monitor-outcomes h3,
+  #solutions .solution-card h3,
+  #services .service-grid h3 {
+    font-size: clamp(1.18rem, 4.8vw, 1.55rem) !important;
+    line-height: 1.45 !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  li,
+  a,
+  span,
+  strong,
+  small,
+  summary {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header,
+  .hero,
+  .issue-band,
+  .section,
+  .profile,
+  .contact,
+  .site-footer {
+    width: calc(100vw - 28px) !important;
+    max-width: calc(100vw - 28px) !important;
+    margin-inline: auto !important;
+  }
+}
+
+/* ==========================================================================
+スマホ最終上書き：実在セレクタに限定した表示崩れ対策
+========================================================================== */
+
+@media (max-width: 900px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  main,
+  section,
+  .site-header,
+  .hero,
+  .issue-band,
+  .section,
+  #monitor,
+  #solutions,
+  #proof,
+  #results,
+  #services,
+  #consult-flow,
+  .profile,
+  .contact,
+  .faq,
+  .site-footer {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  #monitor .outcome-grid,
+  #monitor .monitor-facts,
+  #monitor .monitor-grid,
+  #monitor .monitor-steps ol,
+  #solutions .solution-grid,
+  #proof .proof-grid,
+  #results .metrics-grid,
+  #services .service-grid,
+  #consult-flow .consult-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  #monitor .reassurance-card,
+  #monitor .monitor-summary-card,
+  #monitor .monitor-message,
+  #monitor .monitor-cta,
+  #monitor .monitor-steps,
+  #monitor .outcome-grid article,
+  #monitor .monitor-facts div,
+  #monitor .monitor-grid article,
+  #monitor .monitor-steps li,
+  #solutions .solution-card,
+  #proof .proof-grid article,
+  #results .metrics-grid article,
+  #services .service-grid article,
+  #consult-flow .consult-grid article {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  #consult-flow .consult-grid article {
+    display: block !important;
+    padding: 24px 20px !important;
+  }
+
+  #monitor .reassurance-card,
+  #monitor .monitor-summary-card,
+  #monitor .monitor-message,
+  #monitor .monitor-cta,
+  #solutions .solution-card,
+  #proof .proof-grid article,
+  #services .service-grid article,
+  #consult-flow .consult-grid article {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+
+  #solutions .section-heading,
+  #proof .section-heading,
+  #results .section-heading,
+  #services .section-heading,
+  #consult-flow .section-heading,
+  #monitor .section-heading {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  #solutions-title,
+  #proof-title,
+  #results-title,
+  #services-title,
+  #consult-flow-title,
+  #monitor-title {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(1.48rem, 5.7vw, 2rem) !important;
+    line-height: 1.38 !important;
+    letter-spacing: normal !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  #solutions-title span,
+  #proof-title span,
+  #results-title span,
+  #services-title span,
+  #monitor-title span,
+  .contact h2 span {
+    display: inline !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  #monitor .reassurance-card h3,
+  #monitor .reassurance-card p,
+  #monitor .monitor-grid h3,
+  #monitor .monitor-grid li,
+  #monitor .monitor-steps h3,
+  #monitor .monitor-steps strong,
+  #monitor .monitor-steps p,
+  #monitor .monitor-outcomes h3,
+  #monitor .monitor-outcomes strong,
+  #monitor .monitor-outcomes p,
+  #monitor .monitor-facts strong,
+  #monitor .monitor-message strong,
+  #solutions .solution-card h3,
+  #solutions .solution-card p,
+  #solutions .mini-cta,
+  #proof .proof-grid strong,
+  #proof .proof-grid p,
+  #results .result-number,
+  #results .result-label,
+  #services .service-grid h3,
+  #services .service-grid p,
+  #consult-flow .consult-grid strong {
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    line-break: strict !important;
+  }
+
+  #monitor .reassurance-card h3,
+  #monitor .monitor-grid h3,
+  #monitor .monitor-steps h3,
+  #monitor .monitor-outcomes h3,
+  #solutions .solution-card h3,
+  #services .service-grid h3 {
+    font-size: clamp(1.18rem, 4.8vw, 1.55rem) !important;
+    line-height: 1.45 !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  li,
+  a,
+  span,
+  strong,
+  small,
+  summary {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header,
+  .hero,
+  .issue-band,
+  .section,
+  .profile,
+  .contact,
+  .site-footer {
+    width: calc(100vw - 28px) !important;
+    max-width: calc(100vw - 28px) !important;
+    margin-inline: auto !important;
+  }
+}
+
+/* ==========================================================================
 スマホ表示崩れ修正：現在のHTMLに存在するクラス名へ合わせた上書き
 ========================================================================== */
 
@@ -2929,5 +3321,201 @@ h2 span {
     height: auto !important;
     object-fit: contain !important;
     object-position: center !important;
+  }
+}
+
+/* ==========================================================================
+スマホ最終上書き TRUE FINAL：実在セレクタだけで最後に勝たせる
+========================================================================== */
+
+@media (max-width: 900px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  main,
+  section,
+  .site-header,
+  .hero,
+  .issue-band,
+  .section,
+  #monitor,
+  #solutions,
+  #proof,
+  #results,
+  #services,
+  #consult-flow,
+  .profile,
+  .contact,
+  .faq,
+  .site-footer {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  #monitor .outcome-grid,
+  #monitor .monitor-facts,
+  #monitor .monitor-grid,
+  #monitor .monitor-steps ol,
+  #solutions .solution-grid,
+  #proof .proof-grid,
+  #results .metrics-grid,
+  #services .service-grid,
+  #consult-flow .consult-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  #monitor .reassurance-card,
+  #monitor .monitor-summary-card,
+  #monitor .monitor-message,
+  #monitor .monitor-cta,
+  #monitor .monitor-steps,
+  #monitor .outcome-grid article,
+  #monitor .monitor-facts div,
+  #monitor .monitor-grid article,
+  #monitor .monitor-steps li,
+  #solutions .solution-card,
+  #proof .proof-grid article,
+  #results .metrics-grid article,
+  #services .service-grid article,
+  #consult-flow .consult-grid article {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  #consult-flow .consult-grid article {
+    display: block !important;
+    padding: 24px 20px !important;
+  }
+
+  #monitor .reassurance-card,
+  #monitor .monitor-summary-card,
+  #monitor .monitor-message,
+  #monitor .monitor-cta,
+  #solutions .solution-card,
+  #proof .proof-grid article,
+  #services .service-grid article,
+  #consult-flow .consult-grid article {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+
+  #solutions .section-heading,
+  #proof .section-heading,
+  #results .section-heading,
+  #services .section-heading,
+  #consult-flow .section-heading,
+  #monitor .section-heading {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  #solutions-title,
+  #proof-title,
+  #results-title,
+  #services-title,
+  #consult-flow-title,
+  #monitor-title {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(1.48rem, 5.7vw, 2rem) !important;
+    line-height: 1.38 !important;
+    letter-spacing: normal !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  #solutions-title span,
+  #proof-title span,
+  #results-title span,
+  #services-title span,
+  #monitor-title span,
+  .contact h2 span {
+    display: inline !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  #monitor .reassurance-card h3,
+  #monitor .reassurance-card p,
+  #monitor .monitor-grid h3,
+  #monitor .monitor-grid li,
+  #monitor .monitor-steps h3,
+  #monitor .monitor-steps strong,
+  #monitor .monitor-steps p,
+  #monitor .monitor-outcomes h3,
+  #monitor .monitor-outcomes strong,
+  #monitor .monitor-outcomes p,
+  #monitor .monitor-facts strong,
+  #monitor .monitor-message strong,
+  #solutions .solution-card h3,
+  #solutions .solution-card p,
+  #solutions .mini-cta,
+  #proof .proof-grid strong,
+  #proof .proof-grid p,
+  #results .result-number,
+  #results .result-label,
+  #services .service-grid h3,
+  #services .service-grid p,
+  #consult-flow .consult-grid strong {
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    line-break: strict !important;
+  }
+
+  #monitor .reassurance-card h3,
+  #monitor .monitor-grid h3,
+  #monitor .monitor-steps h3,
+  #monitor .monitor-outcomes h3,
+  #solutions .solution-card h3,
+  #services .service-grid h3 {
+    font-size: clamp(1.18rem, 4.8vw, 1.55rem) !important;
+    line-height: 1.45 !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  li,
+  a,
+  span,
+  strong,
+  small,
+  summary {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header,
+  .hero,
+  .issue-band,
+  .section,
+  .profile,
+  .contact,
+  .site-footer {
+    width: calc(100vw - 28px) !important;
+    max-width: calc(100vw - 28px) !important;
+    margin-inline: auto !important;
   }
 }
