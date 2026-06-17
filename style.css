@@ -2322,6 +2322,12 @@ h2 span {
     overflow-x: hidden;
   }
 
+  *,
+  *::before,
+  *::after {
+    min-width: 0;
+  }
+
   .site-header,
   .hero,
   .issue-band,
@@ -2330,11 +2336,17 @@ h2 span {
   .profile,
   .contact,
   .site-footer {
+    width: calc(100% - 28px) !important;
     max-width: 100% !important;
     overflow-x: hidden;
   }
 
-  .hero-main,
+  .hero-main {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
   .issue-grid,
   .about-grid,
   .solution-grid,
@@ -2347,6 +2359,7 @@ h2 span {
   .monitor-facts,
   .outcome-grid,
   .monitor-steps ol {
+    display: grid !important;
     grid-template-columns: 1fr !important;
   }
 
@@ -2376,6 +2389,18 @@ h2 span {
     min-width: 0 !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+  }
+
+  .section-heading {
+    display: block !important;
+    grid-template-columns: none !important;
+    padding-left: 16px !important;
+  }
+
+  .section-heading .eyebrow,
+  .section-heading h2,
+  .section-lead {
+    grid-column: auto !important;
   }
 
   h1,
@@ -2420,7 +2445,6 @@ h2 span {
   }
 
   .section-lead,
-  .section-description,
   .reassurance-card p,
   .consult-grid strong,
   .solution-grid p,
@@ -2431,19 +2455,53 @@ h2 span {
   }
 
   .consult-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
     gap: 20px !important;
   }
 
   .consult-grid article {
+    display: block !important;
     padding: 24px 20px !important;
   }
 
+  .consult-grid strong {
+    display: block !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
   .reassurance-card {
+    width: 100% !important;
+    max-width: 100% !important;
     padding: 22px 18px !important;
+  }
+
+  .reassurance-card h3,
+  .reassurance-card p {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
   }
 
   .solution-card {
     min-height: auto !important;
+    padding: 24px 20px !important;
+  }
+
+  .solution-card h3,
+  .solution-card p,
+  .mini-cta {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  .metrics-grid strong {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
   }
 
   .site-header {
@@ -2467,6 +2525,394 @@ h2 span {
 
   .menu-button {
     flex: 0 0 42px;
+  }
+
+  .hero-photo-card {
+    aspect-ratio: auto !important;
+  }
+
+  .hero-photo-card .hero-photo-placeholder {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .hero-photo-card img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+}
+
+/* ==========================================================================
+スマホ表示崩れ修正：現在のHTMLに存在するクラス名へ合わせた上書き
+========================================================================== */
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .site-header,
+  .hero,
+  .issue-band,
+  .section,
+  .profile,
+  .contact,
+  .site-footer {
+    width: calc(100vw - 28px) !important;
+    max-width: calc(100vw - 28px) !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .hero-main,
+  .hero-badges,
+  .issue-grid,
+  .about-grid,
+  .monitor-grid,
+  .monitor-facts,
+  .outcome-grid,
+  .solution-grid,
+  .proof-grid,
+  .service-grid,
+  .process-list,
+  .consult-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  .about-grid,
+  .monitor-grid,
+  .monitor-facts,
+  .outcome-grid,
+  .solution-grid,
+  .proof-grid,
+  .service-grid,
+  .process-list,
+  .consult-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .section-heading {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 16px !important;
+  }
+
+  .section-heading h2,
+  .section-heading h2 span,
+  .issue-band h2,
+  .contact h2,
+  .contact h2 span {
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  .section-lead {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-column: auto !important;
+  }
+
+  .consult-grid article,
+  .solution-card,
+  .reassurance-card,
+  .monitor-summary-card,
+  .monitor-message,
+  .monitor-cta,
+  .monitor-steps,
+  .monitor-steps li,
+  .monitor-facts div,
+  .outcome-grid article,
+  .proof-grid article,
+  .process-list li {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .consult-grid article {
+    min-height: auto !important;
+    padding: 22px 18px !important;
+  }
+
+  .consult-grid strong,
+  .solution-card h3,
+  .solution-card p,
+  .reassurance-card h3,
+  .reassurance-card p,
+  .monitor-facts strong,
+  .monitor-message strong,
+  .monitor-push,
+  .mini-cta {
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  .solution-card {
+    min-height: auto !important;
+    padding: 24px 18px !important;
+  }
+
+  .mini-cta,
+  .button {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .reassurance-card,
+  .monitor-summary-card {
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+  }
+}
+
+/* ==========================================================================
+最終表示崩れ修正：PC写真とスマホ横はみ出し対策
+========================================================================== */
+
+.hero-photo-card {
+  aspect-ratio: 4 / 3 !important;
+  overflow: hidden !important;
+}
+
+.hero-photo-card .hero-photo-placeholder {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+
+.hero-photo-card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 45% !important;
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  body {
+    min-width: 0 !important;
+  }
+
+  .site-header,
+  .hero,
+  .issue-band,
+  .section,
+  .monitor,
+  .profile,
+  .contact,
+  .site-footer {
+    width: calc(100vw - 28px) !important;
+    max-width: calc(100vw - 28px) !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    overflow-x: clip !important;
+  }
+
+  .hero-main,
+  .hero-copy,
+  .hero-media,
+  .hero-badges,
+  .issue-grid,
+  .about-grid,
+  .monitor-outcomes,
+  .outcome-grid,
+  .monitor-summary-card,
+  .monitor-facts,
+  .monitor-message,
+  .reassurance-card,
+  .monitor-grid,
+  .monitor-steps,
+  .monitor-steps ol,
+  .monitor-cta,
+  .solution-grid,
+  .proof-grid,
+  .process-list,
+  .metrics-grid,
+  .service-grid,
+  .consult-grid,
+  .faq-list,
+  .contact-actions {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-main,
+  .issue-grid,
+  .about-grid,
+  .outcome-grid,
+  .monitor-facts,
+  .monitor-grid,
+  .monitor-steps ol,
+  .solution-grid,
+  .proof-grid,
+  .process-list,
+  .metrics-grid,
+  .service-grid,
+  .consult-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  .hero-badges {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .section-heading {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 16px !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  li,
+  strong,
+  summary,
+  small,
+  .section-heading,
+  .section-heading h2,
+  .section-heading h2 span,
+  .section-lead,
+  .hero-subcopy,
+  .hero-subcopy span,
+  .hero-text,
+  .hero-note,
+  .button-note,
+  .monitor-subtitle,
+  .monitor-push,
+  .result-number,
+  .result-label {
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    line-break: strict;
+  }
+
+  h2,
+  .section-heading h2,
+  .issue-band h2,
+  .monitor .section-heading h2,
+  .contact h2 {
+    font-size: clamp(1.65rem, 6.5vw, 2.2rem) !important;
+    line-height: 1.35 !important;
+  }
+
+  h3,
+  .reassurance-card h3,
+  .monitor-outcomes h3,
+  .monitor-steps h3 {
+    font-size: clamp(1.24rem, 5.2vw, 1.68rem) !important;
+    line-height: 1.45 !important;
+  }
+
+  .section-lead,
+  .hero-text,
+  .hero-note,
+  .reassurance-card p,
+  .solution-card p,
+  .proof-grid p,
+  .service-grid p,
+  .process-list p,
+  .consult-grid strong {
+    font-size: 1rem !important;
+    line-height: 1.78 !important;
+  }
+
+  .issue-grid article,
+  .principle-card,
+  .outcome-grid article,
+  .monitor-facts div,
+  .monitor-grid article,
+  .monitor-steps li,
+  .solution-card,
+  .proof-grid article,
+  .process-list li,
+  .metrics-grid article,
+  .service-grid article,
+  .consult-grid article,
+  .faq-list details,
+  .reassurance-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .principle-card,
+  .consult-grid article,
+  .solution-card,
+  .proof-grid article,
+  .service-grid article,
+  .monitor-grid article,
+  .monitor-steps li,
+  .reassurance-card,
+  .monitor-summary-card,
+  .monitor-message,
+  .monitor-cta {
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+  }
+
+  .principle-card {
+    grid-template-columns: 54px minmax(0, 1fr) !important;
+  }
+
+  .consult-grid article {
+    display: block !important;
+  }
+
+  .consult-grid strong,
+  .principle-card strong,
+  .principle-card p,
+  .solution-card h3,
+  .solution-card p,
+  .mini-cta,
+  .monitor-facts strong,
+  .monitor-message strong,
+  .reassurance-card h3,
+  .reassurance-card p {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    line-break: strict;
+  }
+
+  .mini-cta,
+  .button,
+  .hero-actions .button-primary,
+  .monitor-cta .button-primary {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .hero-photo-card {
