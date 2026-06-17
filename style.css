@@ -2158,3 +2158,125 @@ h2 span {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
+
+/* ==========================================================================
+公開前最終調整
+========================================================================== */
+
+.about-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+}
+
+.about-grid .principle-card {
+  min-height: 220px !important;
+  height: 100%;
+}
+
+.solution-card {
+  position: relative;
+}
+
+.solution-card-featured {
+  display: flex;
+  flex-direction: column;
+}
+
+.monitor-mini-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 18px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.mini-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  margin-top: 14px;
+  padding: 12px 18px;
+  border: 1px solid rgba(201, 121, 34, 0.5);
+  border-radius: 999px;
+  color: var(--accent-dark);
+  background: #fffaf1;
+  font-size: 0.94rem;
+  font-weight: 850;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.mini-cta:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.hero-photo-card {
+  aspect-ratio: 16 / 11;
+}
+
+.hero-photo-placeholder,
+.hero-photo-placeholder img {
+  min-height: auto !important;
+  height: 100%;
+}
+
+.hero-photo-placeholder img {
+  object-position: center 40%;
+}
+
+.profile {
+  grid-template-columns: 260px minmax(0, 1fr) !important;
+  gap: 54px !important;
+}
+
+.profile-photo {
+  width: min(100%, 260px) !important;
+  aspect-ratio: 3 / 4 !important;
+  border: 6px solid #fff;
+  border-radius: 18px !important;
+  box-shadow: 0 16px 44px rgba(18, 43, 64, 0.1);
+}
+
+.profile-photo img {
+  object-position: center top;
+}
+
+@media (max-width: 1180px) {
+  .about-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .profile {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .about-grid .principle-card {
+    min-height: auto !important;
+  }
+
+  .mini-cta {
+    width: 100%;
+  }
+
+  .hero-photo-card {
+    aspect-ratio: auto;
+  }
+
+  .profile-photo {
+    width: min(100%, 220px) !important;
+  }
+}
