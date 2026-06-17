@@ -2741,6 +2741,177 @@ h2 span {
 }
 
 /* ==========================================================================
+支援方針3ステップのスマホ段落補正：最終上書き
+========================================================================== */
+
+@media (max-width: 768px) {
+  #about {
+    overflow-x: hidden !important;
+  }
+
+  #about .about-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #about .about-grid > *,
+  #about .principle-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  #about .principle-card {
+    display: grid !important;
+    grid-template-columns: 54px minmax(0, 1fr) !important;
+    gap: 10px 16px !important;
+    padding: 24px 20px !important;
+  }
+
+  #about-title,
+  #about-title span,
+  #about .principle-card strong,
+  #about .principle-card p {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    line-break: strict !important;
+  }
+
+  #about-title {
+    font-size: clamp(1.55rem, 6vw, 2rem) !important;
+    line-height: 1.35 !important;
+    letter-spacing: normal !important;
+  }
+
+  #about-title span {
+    display: inline !important;
+  }
+}
+
+/* ==========================================================================
+スマホ段落調整 TRUE LAST：HTML実在クラスの段落・カード幅を最終補正
+========================================================================== */
+
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  #about,
+  #monitor,
+  #solutions,
+  #proof,
+  #process,
+  #results,
+  #services,
+  #consult-flow {
+    overflow-x: hidden !important;
+  }
+
+  #about .about-grid,
+  #consult-flow .consult-grid,
+  #solutions .solution-grid,
+  #proof .proof-grid,
+  #process .process-list,
+  #results .metrics-grid,
+  #services .service-grid,
+  #monitor .outcome-grid,
+  #monitor .monitor-grid,
+  #monitor .monitor-facts,
+  #monitor .monitor-steps ol {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #about .about-grid > *,
+  #consult-flow .consult-grid > *,
+  #solutions .solution-grid > *,
+  #proof .proof-grid > *,
+  #process .process-list > *,
+  #results .metrics-grid > *,
+  #services .service-grid > *,
+  #monitor .outcome-grid > *,
+  #monitor .monitor-grid > *,
+  #monitor .monitor-facts > *,
+  #monitor .monitor-steps ol > *,
+  #monitor .reassurance-card,
+  #monitor .monitor-summary-card,
+  #monitor .monitor-message,
+  #monitor .monitor-cta {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  #about .principle-card {
+    display: grid !important;
+    grid-template-columns: 54px minmax(0, 1fr) !important;
+    gap: 10px 16px !important;
+    padding: 24px 20px !important;
+  }
+
+  #about .principle-card p,
+  #about .principle-card strong,
+  #consult-flow .consult-grid strong,
+  #solutions .solution-card h3,
+  #solutions .solution-card p,
+  #proof .proof-grid strong,
+  #proof .proof-grid p,
+  #process .process-list strong,
+  #process .process-list p,
+  #results .result-number,
+  #results .result-label,
+  #services .service-grid h3,
+  #services .service-grid p,
+  #monitor .reassurance-card h3,
+  #monitor .reassurance-card p {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    line-break: strict !important;
+  }
+
+  #solutions-title,
+  #proof-title,
+  #process-title,
+  #results-title,
+  #services-title,
+  #consult-flow-title,
+  #monitor-title,
+  #about-title {
+    font-size: clamp(1.55rem, 6vw, 2rem) !important;
+    line-height: 1.35 !important;
+    letter-spacing: normal !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  #solutions-title span,
+  #proof-title span,
+  #process-title span,
+  #results-title span,
+  #services-title span,
+  #monitor-title span,
+  #about-title span {
+    display: inline !important;
+    white-space: normal !important;
+  }
+}
+
+/* ==========================================================================
 スマホ最終上書き：実在セレクタに限定した表示崩れ対策
 ========================================================================== */
 
@@ -3343,6 +3514,7 @@ h2 span {
   .issue-band,
   .section,
   #monitor,
+  #about,
   #solutions,
   #proof,
   #results,
@@ -3357,6 +3529,7 @@ h2 span {
   }
 
   #monitor .outcome-grid,
+  #about .about-grid,
   #monitor .monitor-facts,
   #monitor .monitor-grid,
   #monitor .monitor-steps ol,
@@ -3374,6 +3547,7 @@ h2 span {
   }
 
   #monitor .reassurance-card,
+  #about .principle-card,
   #monitor .monitor-summary-card,
   #monitor .monitor-message,
   #monitor .monitor-cta,
@@ -3399,6 +3573,13 @@ h2 span {
     padding: 24px 20px !important;
   }
 
+  #about .principle-card {
+    display: grid !important;
+    grid-template-columns: 54px minmax(0, 1fr) !important;
+    gap: 10px 16px !important;
+    padding: 24px 20px !important;
+  }
+
   #monitor .reassurance-card,
   #monitor .monitor-summary-card,
   #monitor .monitor-message,
@@ -3412,6 +3593,7 @@ h2 span {
   }
 
   #solutions .section-heading,
+  #about .section-heading,
   #proof .section-heading,
   #results .section-heading,
   #services .section-heading,
@@ -3424,6 +3606,7 @@ h2 span {
   }
 
   #solutions-title,
+  #about-title,
   #proof-title,
   #results-title,
   #services-title,
@@ -3440,6 +3623,7 @@ h2 span {
   }
 
   #solutions-title span,
+  #about-title span,
   #proof-title span,
   #results-title span,
   #services-title span,
@@ -3452,6 +3636,8 @@ h2 span {
   }
 
   #monitor .reassurance-card h3,
+  #about .principle-card strong,
+  #about .principle-card p,
   #monitor .reassurance-card p,
   #monitor .monitor-grid h3,
   #monitor .monitor-grid li,
