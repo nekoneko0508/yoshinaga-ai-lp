@@ -1148,6 +1148,42 @@ h2 span {
   color: var(--muted);
 }
 
+.about-grid {
+  align-items: stretch;
+}
+
+.about-grid .principle-card {
+  min-height: 220px;
+}
+
+.profile-list {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-list li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.profile-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.78em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  transform: translateY(-50%);
+}
+
 .goal-card {
   display: grid;
   align-content: start;
@@ -1205,5 +1241,9 @@ h2 span {
 
   .nav-contact {
     max-width: none;
+  }
+
+  .about-grid .principle-card {
+    min-height: auto;
   }
 }
