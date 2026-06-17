@@ -1148,6 +1148,48 @@ h2 span {
   color: var(--muted);
 }
 
+.monitor-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.monitor-facts div {
+  min-height: 108px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.monitor-facts span,
+.button-note,
+.goal-card small {
+  color: var(--muted);
+}
+
+.monitor-facts span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.monitor-facts strong {
+  display: block;
+  color: var(--navy);
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+.button-note {
+  max-width: 520px;
+  margin-top: 12px;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
 .about-grid {
   align-items: stretch;
 }
@@ -1200,6 +1242,41 @@ h2 span {
   margin-top: 8px;
 }
 
+.proof {
+  background: #fff;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.proof-grid article {
+  min-height: 160px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--soft);
+}
+
+.proof-grid strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--navy);
+  font-size: 1.12rem;
+}
+
+.proof-grid p {
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.metrics-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .faq {
   background: var(--soft);
 }
@@ -1229,7 +1306,10 @@ h2 span {
 }
 
 @media (max-width: 1180px) {
-  .monitor-grid {
+  .monitor-grid,
+  .monitor-facts,
+  .proof-grid,
+  .metrics-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1245,5 +1325,11 @@ h2 span {
 
   .about-grid .principle-card {
     min-height: auto;
+  }
+
+  .monitor-facts div,
+  .proof-grid article {
+    min-height: auto;
+    padding: 20px;
   }
 }

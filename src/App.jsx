@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight, CheckCircle2, ClipboardList, FileText, Handshake, MessageCircle, Mic2, Settings } from 'lucide-react';
 
 const contactUrl = 'https://calendar.app.google/upnhBkh2tjp5CE5c8';
-const ctaText = '30分無料相談で、AIで回せる業務を整理する';
+const ctaText = 'まずは30分無料相談する';
 
 const concerns = [
   '人が足りず、事務作業が後回しになっている',
@@ -75,7 +75,7 @@ function App() {
       <section className="hero" id="top">
         <div className="heroCopy">
           <p className="eyebrow">中小企業AIプロデューサー</p>
-          <h1>人が足りなくて止まっている仕事を、社内の人がAIで回せるようにしませんか？</h1>
+          <h1>食品会社・製造業のためのAI担当者育成モニター</h1>
           <p className="lead">
             中小企業AIプロデューサー 吉永さとこ が、議事録・マニュアル作成・SNS広報・情報整理など、
             後回しになりがちな業務をAIで進められる担当者を育てます。
@@ -214,7 +214,7 @@ function App() {
       <section className="contact" id="contact">
         <p className="eyebrow">Contact</p>
         <h2>30分無料相談で、AIで回せる業務を整理しませんか。</h2>
-        <p>相談内容がまとまっていなくても大丈夫です。人が足りなくて止まっている仕事を伺い、最初の一歩を一緒に考えます。</p>
+        <p>相談内容がまとまっていなくても大丈夫です。今の業務でAIに任せられることを一緒に整理します。</p>
         <div className="contactActions">
           <a className="primaryButton light" href={contactUrl}>{ctaText}<ArrowRight size={18} aria-hidden="true" /></a>
           <a className="outlineButton" href={contactUrl}><FileText size={18} aria-hidden="true" />{ctaText}</a>
