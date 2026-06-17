@@ -2293,3 +2293,195 @@ h2 span {
     width: min(100%, 220px) !important;
   }
 }
+
+/* ==========================================================================
+表示崩れ修正：PC写真とスマホ横はみ出し対策
+========================================================================== */
+
+.hero-photo-card {
+  aspect-ratio: 4 / 3 !important;
+}
+
+.hero-photo-card .hero-photo-placeholder {
+  height: 100% !important;
+  min-height: 0 !important;
+}
+
+.hero-photo-card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 45% !important;
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .site-header,
+  .hero,
+  .issue-band,
+  .section,
+  .monitor,
+  .profile,
+  .contact,
+  .site-footer {
+    max-width: 100% !important;
+    overflow-x: hidden;
+  }
+
+  .hero-main,
+  .issue-grid,
+  .about-grid,
+  .solution-grid,
+  .proof-grid,
+  .metrics-grid,
+  .service-grid,
+  .process-list,
+  .consult-grid,
+  .monitor-grid,
+  .monitor-facts,
+  .outcome-grid,
+  .monitor-steps ol {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-main,
+  .hero-copy,
+  .hero-media,
+  .hero-photo-card,
+  .issue-grid article,
+  .principle-card,
+  .solution-card,
+  .proof-grid article,
+  .metrics-grid article,
+  .service-grid article,
+  .process-list li,
+  .consult-grid article,
+  .monitor-grid article,
+  .monitor-facts div,
+  .monitor-summary-card,
+  .monitor-message,
+  .reassurance-card,
+  .monitor-steps,
+  .monitor-steps li,
+  .monitor-cta,
+  .profile-copy,
+  .faq-list details {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  li,
+  strong,
+  summary,
+  .section-heading,
+  .section-lead,
+  .hero-subcopy,
+  .hero-text,
+  .hero-note,
+  .monitor-subtitle,
+  .monitor-push {
+    max-width: 100% !important;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  h1 span,
+  h2 span,
+  .hero-subcopy span {
+    white-space: normal !important;
+  }
+
+  h2,
+  .section-heading h2,
+  .issue-band h2,
+  .monitor .section-heading h2 {
+    font-size: clamp(1.7rem, 7vw, 2.3rem) !important;
+    line-height: 1.35 !important;
+  }
+
+  h3,
+  .reassurance-card h3,
+  .monitor-outcomes h3,
+  .monitor-steps h3 {
+    font-size: clamp(1.25rem, 5.5vw, 1.75rem) !important;
+    line-height: 1.45 !important;
+  }
+
+  .section-lead,
+  .section-description,
+  .reassurance-card p,
+  .consult-grid strong,
+  .solution-grid p,
+  .proof-grid p,
+  .metrics-grid span {
+    font-size: 1rem !important;
+    line-height: 1.75 !important;
+  }
+
+  .consult-grid {
+    gap: 20px !important;
+  }
+
+  .consult-grid article {
+    padding: 24px 20px !important;
+  }
+
+  .reassurance-card {
+    padding: 22px 18px !important;
+  }
+
+  .solution-card {
+    min-height: auto !important;
+  }
+
+  .site-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .brand {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .brand span:last-child {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .menu-button {
+    flex: 0 0 42px;
+  }
+
+  .hero-photo-card {
+    aspect-ratio: auto !important;
+  }
+
+  .hero-photo-card .hero-photo-placeholder {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .hero-photo-card img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+}
