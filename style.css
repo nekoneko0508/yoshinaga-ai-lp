@@ -67,11 +67,16 @@ p {
 
 h1 {
   color: var(--navy);
-  font-size: clamp(4.35rem, 7vw, 7.2rem);
+  font-size: clamp(3.7rem, 6.1vw, 6.25rem);
   font-weight: 950;
-  line-height: 1.04;
+  line-height: 1.08;
   letter-spacing: 0;
   word-break: keep-all;
+}
+
+h1 span:first-child {
+  color: var(--accent-dark);
+  font-size: 1.08em;
 }
 
 h1 span,
@@ -261,7 +266,7 @@ h3 {
 
 .hero-text {
   max-width: 720px;
-  margin-top: 14px;
+  margin-top: 18px;
   color: var(--ink);
   font-size: clamp(1.02rem, 1.16vw, 1.18rem);
   font-weight: 650;
@@ -271,17 +276,46 @@ h3 {
 
 .hero-note {
   max-width: 660px;
-  margin-top: 18px;
+  margin-top: 16px;
   color: var(--muted);
   font-size: clamp(0.98rem, 1vw, 1.08rem);
   font-weight: 560;
   line-height: 1.85;
 }
 
+.hero-badges {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 820px;
+  margin-top: 22px;
+}
+
+.hero-badges span {
+  display: grid;
+  place-items: center;
+  min-height: 54px;
+  padding: 10px 12px;
+  border: 1px solid rgba(18, 43, 64, 0.1);
+  border-left: 4px solid var(--navy-2);
+  border-radius: 10px;
+  color: var(--navy);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 28px rgba(18, 43, 64, 0.07);
+  font-size: 0.92rem;
+  font-weight: 850;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.hero-badges span:first-child {
+  border-left-color: var(--accent);
+}
+
 .hero-actions {
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 26px;
 }
 
 .button {
@@ -945,11 +979,15 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(3.25rem, 9vw, 5.6rem);
+    font-size: clamp(2.95rem, 7.8vw, 4.8rem);
   }
 
   .hero-copy {
     padding-right: 34px;
+  }
+
+  .hero-badges {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero-media {
@@ -997,9 +1035,13 @@ h3 {
 
 @media (max-width: 680px) {
   h1 {
-    font-size: clamp(2.28rem, 11vw, 3.15rem);
+    font-size: clamp(2.12rem, 9.5vw, 2.88rem);
     font-weight: 950;
-    line-height: 1.14;
+    line-height: 1.17;
+  }
+
+  h1 span:first-child {
+    font-size: 1.04em;
   }
 
   h2 {
@@ -1034,6 +1076,18 @@ h3 {
   .hero-note {
     font-size: 0.96rem;
     line-height: 1.75;
+  }
+
+  .hero-badges {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .hero-badges span {
+    min-height: 48px;
+    padding: 9px 8px;
+    font-size: 0.82rem;
   }
 
   .hero-media,
