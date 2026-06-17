@@ -2249,6 +2249,19 @@ h2 span {
   object-position: center top;
 }
 
+.hero-photo-card .hero-photo-placeholder {
+  height: auto !important;
+  min-height: auto !important;
+}
+
+.hero-photo-card img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
 @media (max-width: 1180px) {
   .about-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
