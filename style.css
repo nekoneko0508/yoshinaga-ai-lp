@@ -2762,7 +2762,7 @@ PCファーストビュー写真サイズ調整
     width: min(36vw, 520px) !important;
     max-width: 520px !important;
     aspect-ratio: 1 / 1 !important;
-    flex: 0 1 520px !important;
+    flex: 0 0 520px !important;
   }
 
   .hero-photo-card img {
@@ -3279,7 +3279,7 @@ PCファーストビュー写真サイズ調整
 ========================================================================== */
 
 .hero-photo-card {
-  aspect-ratio: 4 / 3 !important;
+  aspect-ratio: 1 / 1 !important;
   overflow: hidden !important;
 }
 
@@ -3294,7 +3294,8 @@ PCファーストビュー写真サイズ調整
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
-  object-position: center 40% !important;
+  object-position: center 36% !important;
+  display: block !important;
 }
 
 @media (max-width: 768px) {
