@@ -2741,6 +2741,32 @@ h2 span {
 }
 
 /* ==========================================================================
+PCファーストビュー写真サイズ調整
+========================================================================== */
+
+@media (min-width: 901px) {
+  .hero-media {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .hero-photo-card {
+    width: min(42vw, 620px) !important;
+    max-width: 620px !important;
+    aspect-ratio: 4 / 3 !important;
+    flex: 0 1 620px !important;
+  }
+
+  .hero-photo-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 40% !important;
+  }
+}
+
+/* ==========================================================================
 支援方針3ステップのスマホ段落補正：最終上書き
 ========================================================================== */
 
