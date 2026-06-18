@@ -3739,3 +3739,23 @@ PCファーストビュー写真サイズ調整
     margin-inline: auto !important;
   }
 }
+
+/* ==========================================================================
+スマホ：ファーストビュー見出し改行だけ最終修正
+========================================================================== */
+
+@media (max-width: 768px) {
+  #hero-title {
+    font-size: clamp(2rem, 8.6vw, 2.75rem) !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.04em !important;
+    max-width: 100% !important;
+  }
+
+  #hero-title span {
+    display: block !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+  }
+}
