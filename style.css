@@ -2752,10 +2752,10 @@ PCファーストビュー写真サイズ調整
   }
 
   .hero-photo-card {
-    width: min(42vw, 620px) !important;
-    max-width: 620px !important;
+    width: min(46vw, 720px) !important;
+    max-width: 720px !important;
     aspect-ratio: 4 / 3 !important;
-    flex: 0 1 620px !important;
+    flex: 0 1 720px !important;
   }
 
   .hero-photo-card img {
