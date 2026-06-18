@@ -2745,14 +2745,21 @@ PCファーストビュー写真サイズ調整
 ========================================================================== */
 
 @media (min-width: 901px) {
+  .hero-main {
+    grid-template-columns: minmax(0, 1.05fr) minmax(520px, 0.95fr) !important;
+    align-items: center !important;
+  }
+
   .hero-media {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    width: 100% !important;
+    max-width: none !important;
   }
 
   .hero-photo-card {
-    width: min(46vw, 720px) !important;
+    width: min(100%, 720px) !important;
     max-width: 720px !important;
     aspect-ratio: 4 / 3 !important;
     flex: 0 1 720px !important;
