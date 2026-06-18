@@ -3759,3 +3759,27 @@ PCファーストビュー写真サイズ調整
     overflow-wrap: normal !important;
   }
 }
+
+/* ==========================================================================
+スマホ：メイン見出し「求人を出しても、」を2行構成に固定
+========================================================================== */
+
+@media (max-width: 768px) {
+  #hero-title {
+    font-size: clamp(1.85rem, 7.8vw, 2.45rem) !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.05em !important;
+    max-width: 100% !important;
+  }
+
+  #hero-title span,
+  #hero-title span:first-child,
+  #hero-title span:last-child {
+    display: block !important;
+    font-size: 1em !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    line-break: strict !important;
+  }
+}
